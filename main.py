@@ -75,7 +75,7 @@ photo = open("media/download.jpg", "rb")
 
 
 @dp.message_handler(commands=["mem"])
-async def start_handler(message: types.Message):
+async def mem_handler(message: types.Message):
     await bot.send_photo(message.from_user.id, photo=photo)
 
 
