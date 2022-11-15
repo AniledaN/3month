@@ -81,9 +81,8 @@ async def start_handler(message: types.Message):
 
 @dp.message_handler()
 async def echo(message: types.Message):
-    a = int(message.text)
-    if a:
-        await bot.send_message(message.from_user.id, a**2)
+    if message.text.isdigit():
+        await bot.send_message(message.from_user.id, int(message.text)**2)
     else:
         await bot.send_message(message.from_user.id, message.text)
 
