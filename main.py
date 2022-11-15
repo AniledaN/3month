@@ -12,7 +12,7 @@ bot = Bot(TOKEN)
 dp = Dispatcher(bot=bot)
 
 
-@dp.message_handler(commands=["start"])
+@dp.message_handler(commands=["start", "help"])
 async def start_handler(message: types.Message):
     await bot.send_message(message.from_user.id, f"Привет {message.from_user.first_name}!")
 
