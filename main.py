@@ -67,9 +67,7 @@ async def quiz_2(call: types.CallbackQuery):
 
 @dp.message_handler(commands=["mem"])
 async def mem_handler(message: types.Message):
-
     photo = open("media/download.jpg", "rb")
-
     await bot.send_photo(message.from_user.id, photo=photo)
 
 
